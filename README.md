@@ -6,6 +6,7 @@ Technical assessment for SCA Cloud application
 #The stable and feature branch contains a dockerfile that display a webpage and a  text.
 
 #The exercise2 branch is a CLI application which can check for OS type and install nodejs, curl, and wget if not available according to the command suitable for the enviroment.
+The solution is developed in shell script.
 
 ***********EXERCISE 1****************************************************************************
 
