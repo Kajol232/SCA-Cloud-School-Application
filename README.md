@@ -1,27 +1,30 @@
 # SCA-Cloud-School-Application
 Technical assessment for SCA Cloud application
 
-#This repository contains solution for both exercise one and two
+This repository contains solution for both exercise one and two
 
-#The stable and feature branch contains a dockerfile that display a webpage and a  text.
+The stable and feature branch contains a dockerfile that display a webpage and a  text.
 
-#The exercise2 branch is a CLI application which can check for OS type and install nodejs, curl, and wget if not available according to the command suitable for the enviroment.
+The exercise2 branch is a CLI application which can check for OS type and install nodejs, curl, and wget if not available according to the command suitable for the enviroment.
 The solution is developed in shell script.
 
-***********EXERCISE 1****************************************************************************
+## EXERCISE 1
 
 Link to dockerhub - https://hub.docker.com/repository/docker/kajol232/sca-cloud-application-exercise1
 
-#Exercise 1 Test process
+### Exercise 1 Test process
 
-1* Created a folder on my desktop and named SCACloud.
-2* Run Ubuntu WSL and redirect to SCACloud directory path.
-3* Creates a directory named nginx_docker using "mkdir nginx_docker" command.
-4* Redirect into the nginx_docker folder.
-5* Create an html file named index.html and a CSS file named style.css.
-6* Creates a file named Dockerfile using "touch Dockerfile" command.
-7* Edited the Dockerfile through nano editor.
-8* Build my image using "docker buid -t welcome ."
+1. Created a folder on my desktop and named SCACloud.
+
+2. Run Ubuntu WSL and redirect to SCACloud directory path.
+3. Creates a directory named nginx_docker using "mkdir nginx_docker" command.
+4. Redirect into the nginx_docker folder.
+5. Create an html file named index.html and a CSS file named style.css.
+6. Creates a file named Dockerfile using "touch Dockerfile" command.
+7. Edited the Dockerfile through nano editor.
+8. Build my image using "docker buid -t welcome ."
+
+````
     *********BUILD OUTPUT**************
       [+] Building 10.2s (12/12) FINISHED
  => [internal] load .dockerignore                                                                 1.2s
@@ -42,13 +45,15 @@ Link to dockerhub - https://hub.docker.com/repository/docker/kajol232/sca-cloud-
  => => exporting layers                                                                           0.0s
  => => writing image sha256:fbb73a9837159f4f093d4363d4048a4161be8a87955b198e0251dee929f5b839      0.1s
  => => naming to docker.io/library/welcome
- 
- 9* Run image using "docker run -dit -p 8081:80 welcome" command
-   *************RUN OUTPUT**********
-   27d7000a26d1048b24714a55fa5a7c9450ee37ab9f36d352d2825b6551aa18c7
-   
-10* Run my image on a browser using "http://localhost:8081/" URL.
+````
 
+9. Run image using "docker run -dit -p 8081:80 welcome" command
+   ````*************RUN OUTPUT**********
+   27d7000a26d1048b24714a55fa5a7c9450ee37ab9f36d352d2825b6551aa18c7````
+   
+10 Run my image on a browser using "http://localhost:8081/" URL.
+
+````
 **********DOCKERFILE CONTENT*******************
    #Loading base image
     FROM centos:7
@@ -67,8 +72,10 @@ Link to dockerhub - https://hub.docker.com/repository/docker/kajol232/sca-cloud-
 
    #Specifying entrypoint to the application to docker
     CMD ["nginx", "-g daemon off;"]
+  ````
     
-  ****************HTML FILE CONTENT************
+````
+****************HTML FILE CONTENT************
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,7 +89,9 @@ Link to dockerhub - https://hub.docker.com/repository/docker/kajol232/sca-cloud-
     
 </body>
 </html>
+````
 
+````
 **************************CSS FILE CONTENT********************
 body {
   background-color: antiquewhite
@@ -91,8 +100,9 @@ body {
 	background-color: azure;
 	padding: 20px;
 }
+````
 
-******************************************EXERCISE 2**********************************************
+## EXERCISE 2
 
 * The exercise2 branch contains solution for the CLI application for installing Nodejs, Curl and wget.
 * The CLI Application was developed with SHELL SCRIPT.
@@ -186,6 +196,3 @@ then
 		sudo pacman -sy nodejs
 	fi
 fi
-
-
-
