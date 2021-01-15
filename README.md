@@ -5,7 +5,7 @@ EXERCISE 2
 The exercise2 branch contains solution for the CLI application for installing Nodejs, Curl and wget.
 
 The CLI Application was developed with SHELL SCRIPT.
-
+`````
 ###SCRIPT CONTENT
 
  Shebang statements
@@ -102,18 +102,6 @@ then
 		sudo pacman -sy nodejs
 	fi
 fi
-About
-Technical assessment for SCA Cloud application
-
-Topics
-Resources
- Readme
-Releases
-No releases published
-Create a new release
-Packages
-No packages published
-Publish your first package
-© 2021 GitHub, Inc.
+````
 
 
