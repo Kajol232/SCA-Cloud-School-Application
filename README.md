@@ -104,20 +104,28 @@ body {
 
 ## EXERCISE 2
 
-* The exercise2 branch contains solution for the CLI application for installing Nodejs, Curl and wget.
-* The CLI Application was developed with SHELL SCRIPT.
+The exercise2 branch contains solution for the CLI application for installing Nodejs, Curl and wget.
 
-***************************SCRIPT CONTENT*************************************
- #Shebang statements
-#!/bin/sh
+The CLI Application was developed with SHELL SCRIPT.
+````
+###SCRIPT CONTENT
 
-#Checking the OS of the User and splitting into substring using delimeter to get the actual OSTYPE.
-VER=$(grep '^NAME' /etc/os-release)
-SUB=$(echo $VER | cut -d '=' -f 2)
-TYPE=$(echo $SUB | cut -d '"' -f 2)
-echo "$TYPE"
+ Shebang statements
+ 
+	#!/bin/sh
+	
+Checking the OS of the User and splitting into substring using delimeter to get the actual OSTYPE.
 
-#Using the OS Type of the user to control commands to execute using decision making statements.
+	VER=$(grep '^NAME' /etc/os-release)
+	
+	SUB=$(echo $VER | cut -d '=' -f 2)
+	
+	TYPE=$(echo $SUB | cut -d '"' -f 2)
+	
+	echo "$TYPE"
+
+Using the OS Type of the user to control commands to execute using decision making statements.
+
 if [[ "$TYPE"=="Ubuntu" || "$TYPE"=="Debian" ]];
 then
 	sudo apt update -y
@@ -196,3 +204,4 @@ then
 		sudo pacman -sy nodejs
 	fi
 fi
+````
